@@ -22,7 +22,7 @@ namespace NUMBER {
 
 		return false;
 	}
-	bool Integer::absolute_​​greater(const Integer& other) const noexcept {
+	bool Integer::absolute_greater(const Integer& other) const noexcept {
 		if (other._number.size() != _number.size()) {
 
 			return _number.size() > other._number.size();
@@ -302,7 +302,7 @@ namespace NUMBER {
 			return _sign;
 		}
 
-		return _sign ? absolute_​​greater(other) : absolute_less(other);
+		return _sign ? absolute_greater(other) : absolute_less(other);
 	}
 	bool Integer::operator>(const Integer& other) const noexcept {
 		if (_sign ^ other._sign) {
@@ -310,7 +310,7 @@ namespace NUMBER {
 			return !_sign;
 		}
 
-		return _sign ? absolute_less(other) : absolute_​​greater(other);
+		return _sign ? absolute_less(other) : absolute_greater(other);
 	}
 
 	bool Integer::operator<=(const Integer& other) const noexcept {
@@ -334,7 +334,7 @@ namespace NUMBER {
 	Integer Integer::operator+(const Integer& other) const noexcept {
 		Integer ans;
 		if (_sign ^ other._sign) {
-			bool sign = absolute_​​greater(other);
+			bool sign = absolute_greater(other);
 			ans = sign ? unsigned_sub(other) : other.unsigned_sub(*this);
 			ans._sign = sign ? _sign : other._sign;
 
@@ -499,3 +499,4 @@ namespace NUMBER {
 		return ans;
 	}
 }
+
