@@ -14,7 +14,7 @@ namespace NUMBER {
 		//绝对值判小于
 		bool absolute_less(const Integer& other) const noexcept;
 		//绝对值判大于
-		bool absolute_​​greater(const Integer& other) const noexcept;
+		bool absolute_greater(const Integer& other) const noexcept;
 		//无符号加法
 		Integer unsigned_add(const Integer& other) const noexcept;
 		//无符号减法（this必须大于other）
@@ -63,4 +63,5 @@ namespace NUMBER {
 	inline const Integer _0 = 0, _1 = 1, _2 = 2;
 }
 #endif
+
 
