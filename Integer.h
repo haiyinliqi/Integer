@@ -3,12 +3,6 @@
 #include<vector>
 #include<string>
 #include<cmath>
-namespace BARRETT_REDUCTION {
-	class BarrettReduction;
-}
-namespace RANDOM {
-	class Random;
-}
 namespace NUMBER {
 	using num_t = unsigned int;
 	inline const num_t SIZE = 8;
@@ -69,3 +63,4 @@ namespace NUMBER {
 	inline const Integer _0 = 0, _1 = 1, _2 = 2;
 }
 #endif
+
